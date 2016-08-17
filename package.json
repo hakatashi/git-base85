@@ -4,7 +4,7 @@
   "description": "Pure JS implementation of Base85 used in Git/Mercurial",
   "main": "index.js",
   "scripts": {
-    "mochify:node":    "mochify \"test/*.ls\" --reporter spec --extension .ls --transform browserify-livescript --node",
+    "mochify:node": "mochify \"test/*.ls\" --reporter spec --extension .ls --transform browserify-livescript --node",
     "mochify:phantom": "mochify \"test/*.ls\" --reporter spec --extension .ls --transform browserify-livescript",
     "test": "npm run mochify:node && npm run mochify:phantom"
   },
@@ -31,6 +31,7 @@
     "browserify-livescript": "^0.2.3",
     "chai": "^3.5.0",
     "livescript": "^1.5.0",
+    "mocha": "^2.5.3",
     "mochify": "^2.18.1",
     "mochify-istanbul": "^2.4.1"
   }
