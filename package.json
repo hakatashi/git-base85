@@ -4,7 +4,9 @@
   "description": "Pure JS implementation of Base85 used in Git/Mercurial",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mochify:node":    "mochify \"test/*.ls\" --reporter spec --extension .ls --transform browserify-livescript --node",
+    "mochify:phantom": "mochify \"test/*.ls\" --reporter spec --extension .ls --transform browserify-livescript",
+    "test": "npm run mochify:node && npm run mochify:phantom"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "homepage": "https://github.com/hakatashi/git-base85#readme",
   "devDependencies": {
+    "browserify-livescript": "^0.2.3",
     "chai": "^3.5.0",
     "livescript": "^1.5.0",
     "mochify": "^2.18.1",
